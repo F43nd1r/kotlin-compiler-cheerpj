@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <title>Hello Kotlin CheerpJ</title>
   <script src="https://cjrtnc.leaningtech.com/3_20240416_465/cj3loader.js"></script>
@@ -10,7 +10,7 @@ Hello Kotlin CheerpJ
 <script>
     async function test() {
         await cheerpjInit();
-        const lib = await cheerpjRunLibrary("/app/Kotlin-compiler-cheerpj-1.0-uber.jar")
+        const lib = await cheerpjRunLibrary(`/app${window.location.pathname}Kotlin-compiler-cheerpj-1.0-uber.jar`)
         const KotlinCompiler = await lib.com.faendir.KotlinCompiler
         const result = await KotlinCompiler.INSTANCE.eval('fun main() { println("Hello, Kotlin CheerpJ!"); return 42 }')
         console.log(result)
