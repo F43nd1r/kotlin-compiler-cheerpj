@@ -23,7 +23,7 @@ object KotlinCompiler {
                     println("Severity: ${diagnostic.severity}")
                     println("SourcePath: ${diagnostic.sourcePath}")
                     println("Location: ${diagnostic.location}")
-                    println("Exception: ${diagnostic.exception}")
+                    println("Exception: ${diagnostic.exception?.stackTraceToString()}")
                 }
                 throw RuntimeException()
             }
